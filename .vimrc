@@ -91,6 +91,8 @@ inoremap jj <Esc>
 
 " colon, semi-colon switch
 nnoremap ; :
+" Clear trailing white spaces
+nnoremap <leader>w :call <SID>StripTrailingWhitespaces()<CR>
 
 " Key Bindings
 let mapleader = "\<space>"
@@ -98,4 +100,20 @@ map <Leader>n :NERDTreeToggle<CR>
 map <Leader>j :bp<CR>
 map <Leader>k :bn<CR>
 map <Leader>s :source $MYVIMRC<CR>
+
+"FUNCTIONS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+
+    " Work: match extra whitespace
+    %s/\s\+$//e
+
+    " Cleanup: restore previous search history and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
 
