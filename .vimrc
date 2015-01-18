@@ -86,6 +86,10 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" set focus on cursorline for active buffer
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+
 " exit insert mode within insert mode
 inoremap jj <Esc>
 
