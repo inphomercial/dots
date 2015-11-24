@@ -17,6 +17,7 @@ Plugin 'tComment'
 Plugin 'bling/vim-bufferline'
 Plugin 'itchyny/lightline.vim'                    " Pretty file bar
 Plugin 'beyondwords/vim-twig'                     " Twig highlighting
+Plugin 'pangloss/vim-javascript'                  " Javascript highlighting
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
