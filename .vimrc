@@ -27,7 +27,8 @@ filetype plugin indent on    " required
 syntax on
 
 " Set color scheme
-" colo lucius
+colo lucius
+LuciusDarkLowContrast
 
 " Define whitespace
 hi ExtraWhitespace             ctermfg=161
