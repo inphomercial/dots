@@ -16,6 +16,7 @@ Plugin 'airblade/vim-gitgutter'                   " GIT Gutter
 Plugin 'tComment'
 Plugin 'bling/vim-bufferline'
 Plugin 'itchyny/lightline.vim'                    " Pretty file bar
+Plugin 'beyondwords/vim-twig'                     " Twig highlighting
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -26,7 +27,7 @@ filetype plugin indent on    " required
 syntax on
 
 " Set color scheme
-colo lucius
+" colo lucius
 
 " Define whitespace
 hi ExtraWhitespace             ctermfg=161
